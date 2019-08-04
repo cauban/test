@@ -155,3 +155,11 @@ const one = 1;
 two // undefined
 one = 'one' // TypeError assignment to constant variable
 ```
+
+Sans mot cle, la valeur est accessible dans le contexte global.
+```js
+function() {
+  one = 1;
+}
+one // 1
+```
