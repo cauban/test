@@ -72,10 +72,12 @@ typeof function() {} // "function"
 ```
 
 ```js
-function add(x, y) {
+// function declaration
+function add(x, y) { 
   return x + y;
 }
 
+// function expression
 const add = (x, y) => x + y;
 ```
 
@@ -163,3 +165,43 @@ function() {
 }
 one // 1
 ```
+
+### Hoisting
+
+Les declarations sont attachees au scope. On peut donc referencer une variable avant qu'elle ait une valeur assignee.
+
+```js
+var a; // declaration
+a = 1; // assignment
+```
+
+Le code suivant:
+```js
+a // unedfined
+
+var a = 1;
+```
+Est traduit:
+```js
+var a; // declaration of var a
+a // undefined
+a = 1 // assignment
+```
+
+Le code suivant utilise une function declaration:
+```js
+foo() // "hello"
+
+function foo() { 
+  return "hello"; 
+  }
+```
+
+Celui ci utilise une function expression:
+```js
+foo() // TypeError foo is not a function
+
+const foo = function () {};
+
+```
+
