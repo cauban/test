@@ -110,16 +110,34 @@ true && (false || true) // true
 `var` est scope globalement ou a la fonction.
 ```js
 var one = 1;
-one // 1
 
 function () {
   one // 1
 
   var two = 2;
-
-  two // 2
 }
 
 two // undefined
 
 ```
+
+`let` est scope au block
+```js
+let one = 1;
+{
+  one // 1
+  let two = 2;
+}
+two // undefined
+one = 'one' // ok
+```
+
+`const` est scope au block, la difference est qu'on ne peut pas rebind sa valeur
+```
+const one = 1;
+{
+  one // 1
+  const two = 2;
+}
+two // undefined
+one = 'one' // TypeError assignment to constant variable
