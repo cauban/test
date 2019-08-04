@@ -177,7 +177,7 @@ a = 1; // assignment
 
 Le code suivant:
 ```js
-a // unedfined
+a // undefined
 
 var a = 1;
 ```
@@ -199,9 +199,9 @@ function foo() {
 
 Celui ci utilise une function expression:
 ```js
-foo() // TypeError foo is not a function
+foo() // TypeError foo is not a function (let foo; foo est undefined a ce moment la)
 
-const foo = function () {};
+let foo = function () {};
 
 ```
 
