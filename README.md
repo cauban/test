@@ -189,7 +189,7 @@ me.fullname() // "sun tzu"
 this // Dans le browser renvoie l'objet Window
 ```
 
-```
+```js
 'use strict';
 
 this // undefined - en strict mode le contexte par defaut est undefined
