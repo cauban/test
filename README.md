@@ -118,6 +118,7 @@ function () {
 }
 
 two // undefined
+one = 'one' // ok
 
 ```
 
