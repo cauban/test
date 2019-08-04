@@ -29,6 +29,11 @@ x !== x // true - NaN n'est jamais egal a lui meme
 ~~3.14 // 3 - operateur binaire, bonus
 ```
 
+```js
+(42).toString(16) // "2a" - bonus, 42 base 16
+42..toString(16) // "2a" - bonus, .. permet a l'interpreteur de comprendre que 42. est un nombre et que le second point appelle l'objet
+```
+
 ## Strings
 
 ```js
@@ -61,6 +66,16 @@ false + 1 // 1 - false coerced to zero
 
 ```js
 typeof {} // "object"
+```
+
+```js
+const movie = {
+  director: "Tsui Hark",
+  title: "Time & Tide",
+  get rating () {
+    return 10;
+  }
+}
 ```
 
 ## Functions
@@ -106,6 +121,39 @@ true && (false || true) // true
 ## Prototypes
 
 ## This
+
+`this` est la valeur du contexte. La valeur de `this` est dynamique.
+
+```
+this // Dans le browser renvoie l'objet Window
+```
+
+```js
+const me = {
+  firstname: "sun",
+  lastname: "tzu",
+  fullname() {
+    return this.firstname + " " + this.lastname;
+  }
+}
+
+me.fullname() // "sun tzu" - this est l'objet me qui vient avant le point
+
+const you = { 
+  firstname: "wesley", 
+  lastname: "snipes"
+ };
+ 
+you.fullname = me.fullname;
+
+you.fullname() // "wesley snipes" - this est l'objet you qui vient avant le point
+
+me.fullname.call({name: "tony", lastname: "soprano"}) // "tony soprano", call permet de setter le this
+me.fullname.apply({name: "tony", lastname: "soprano"}) // "tony soprano", apply permet de setter le this
+
+you.fullname = you.fullname.bind(me) // cree une fonction ou le this vaudra me
+you.fullname() // "sun tzu"
+```
 
 ## Scopes
 
@@ -194,7 +242,7 @@ foo() // "hello"
 
 function foo() { 
   return "hello"; 
-  }
+}
 ```
 
 Celui ci utilise une function expression:
