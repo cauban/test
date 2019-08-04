@@ -120,6 +120,11 @@ function () {
 two // undefined
 one = 'one' // ok
 
+{
+  var three = 3;
+}
+
+three // 3
 ```
 
 `let` est scope au block
