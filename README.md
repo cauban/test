@@ -93,6 +93,8 @@ Les valeurs suivantes sont falsy:
 + `false`
 + `""`
 
+`{}` et `[]` sont truthy
+
 ```js
 true && false // false
 true || false // true
