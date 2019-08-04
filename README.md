@@ -342,6 +342,7 @@ function logName(fruit) {
 }
 
 logName(fruit) // apple bullshit - default case is logged because we forgot to break in apple case so everything under is evaluated
+```
 
 ### For loop
 
@@ -351,12 +352,12 @@ for(i = 0; i < 5; i++) { // 0 1 2 3 4
 }
 ```
 
-On declare i a 0; 
-0 est inferieur a 5
-On logge i; // 0
-i++ // i vaut 1
-1 est inferieur a 5
-On logge i // 1 ...
++ On declare i a 0; 
++ 0 est inferieur a 5
++ On logge i; // 0
++ i++ // i vaut 1
++ 1 est inferieur a 5
++ On logge i // 1 ...
 
 ```js
 for(i = 0; i < 5; i++) { // 0 1 2 3 4
@@ -364,12 +365,12 @@ for(i = 0; i < 5; i++) { // 0 1 2 3 4
 }
 ```
 
-On declare i a 0; 
-0 est inferieur a 5
-On setTimeout
-i++ // i vaut 1
-1 est inferieur a 5
-On setTimeout ...
++ On declare i a 0; 
++ 0 est inferieur a 5
++ On setTimeout
++ i++ // i vaut 1
++ 1 est inferieur a 5
++ On setTimeout ...
 
 Une fois que la boucle est finie les console.log se lancent, i vaut 5 comme c'est une valeur globale. 
 
