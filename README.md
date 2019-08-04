@@ -2,7 +2,7 @@
 
 Tests que j'ai eus (aleatoires): Nombres premiers, compter le nombre de mots dans une string, dire si un mot est un anagramme ex jean et neja.
 
-Control flows, stack (un array en last in first out avec methodes push, pop), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) le mec vient de Java il va te dire que tu ne peux pas mettre des trucs dynamiquement sur un objet et que tu dois utiliser une map avec get, set..
+Control flows, stack (un array en last in first out avec methodes push, pop), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) le mec que j'ai eu vient de Java il va te dire que tu ne peux pas mettre des trucs dynamiquement sur un objet et que tu dois utiliser une map avec get, set..
 
 # Test React
 
