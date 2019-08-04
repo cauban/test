@@ -1,6 +1,6 @@
 # Test Algo
 
-Nombres premiers, compter le nombre de mots dans une string, dire si un mot est un anagramme ex jean et neja.
+Tests que j'ai eus (aleatoires): Nombres premiers, compter le nombre de mots dans une string, dire si un mot est un anagramme ex jean et neja.
 
 Control flows, stack (un array en last in first out avec methodes push, pop), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
 
