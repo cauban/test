@@ -32,7 +32,12 @@ const name = "jean";
 
 ## Coercion
 
+```js
 "1" + 1 // "11"
+[] + 1 // "1" - empty array coerced into an empty string
+undefined + 1 // NaN
+false + 1 // 0 - false coerced to zero
+```
 
 ## Objects
 
