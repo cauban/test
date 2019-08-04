@@ -1,3 +1,17 @@
+# Test Algo
+
+Nombres premiers, compter le nombre de mots dans une string, dire si un mot est un anagramme ex jean et neja.
+
+Control flows, stack (un array en last in first out avec methodes push, pop), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
+
+# Test React
+
+Todolist avec une api
+
+Fetch, setState, preventDefault, onChange...
+
+# Test JS
+
 ## Tests
 
 ```js
@@ -62,6 +76,24 @@ false + 1 // 1 - false coerced to zero
 1 === '1' // false - strict equality
 ```
 
+## Arrays
+
+```js
+typeof [] // "object"
+
+const list = [1,2,3];
+
+list.length // 3
+
+list[0] // 1
+
+list.slice(-1) // [3] - does not mutate list, splice does
+
+const same = list;
+same.push(4)
+list // [1,2,3,4];
+```
+
 ## Objects
 
 ```js
@@ -76,6 +108,11 @@ const movie = {
     return 10;
   }
 }
+
+const strange = movie;
+strange.title = "Ebola Syndrome";
+
+movie.title // "Ebola Syndrome"
 ```
 
 ## Functions
@@ -284,4 +321,59 @@ foo() // TypeError foo is not a function (let foo; foo est undefined a ce moment
 let foo = function () {};
 
 ```
+
+## Control flows
+
+### Switch
+
+```js
+const fruit = "apple";
+
+function logName(fruit) {
+  switch(fruit) {
+    case "orange":
+      log("orange");
+      break;
+    case("apple"):
+      log("apple");
+    default:
+      log("bullshit")
+  }
+}
+
+logName(fruit) // apple bullshit - default case is logged because we forgot to break in apple case so everything under is evaluated
+
+### For loop
+
+```js
+for(i = 0; i < 5; i++) { // 0 1 2 3 4
+  console.log(i);
+}
+```
+
+On declare i a 0; 
+0 est inferieur a 5
+On logge i; // 0
+i++ // i vaut 1
+1 est inferieur a 5
+On logge i // 1 ...
+
+```js
+for(i = 0; i < 5; i++) { // 0 1 2 3 4
+  setTimeout(() => console.log(i)); // 5 5 5 5 5
+}
+```
+
+On declare i a 0; 
+0 est inferieur a 5
+On setTimeout
+i++ // i vaut 1
+1 est inferieur a 5
+On setTimeout ...
+
+Une fois que la boucle est finie les console.log se lancent, i vaut 5 comme c'est une valeur globale. 
+
+Pour logger 0 1 2 3 4 il faut ecrire `for(let i = 0`
+
+
 
