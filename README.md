@@ -22,7 +22,7 @@ typeof 1 // "number"
 
 ```js
 const x = NaN;
-x !== x // true - NaN n'est jamais egal a lui meme
+x === x // false - NaN n'est jamais egal a lui meme
 ```
 
 ```js
