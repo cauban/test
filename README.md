@@ -113,11 +113,11 @@ var one = 1;
 one // 1
 
 function () {
-one // 1
+  one // 1
 
-var two = 2;
+  var two = 2;
 
-two // 2
+  two // 2
 }
 
 two // undefined
