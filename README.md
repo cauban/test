@@ -12,14 +12,20 @@ it('adds two numbers', () => {
 
 ```js
 typeof 1 // "number"
+```
 
+```js
 1 + 1 // 2
 
 1 + 2 * 3 // 7 simple maths
+```
 
+```js
 const x = NaN;
 x !== x // true - NaN n'est jamais egal a lui meme
+```
 
+```js
 ~~3.14 // 3 - operateur binaire, bonus
 ```
 
@@ -27,7 +33,9 @@ x !== x // true - NaN n'est jamais egal a lui meme
 
 ```js
 typeof 'hello' // "string"
+```
 
+```js
 const name = "jean";
 "hello" + name // "hellojean" - concatenation
 `hello ${name}` // "hello jean" - template string
@@ -42,7 +50,9 @@ La coercion, c'est le JS qui fait son maximum en convertissant un type vers un a
 [] + 1 // "1" - empty array coerced into an empty string
 undefined + 1 // NaN
 false + 1 // 1 - false coerced to zero
+```
 
+```js
 1 == '1' // true - loose equality
 1 === '1' // false - strict equality
 ```
@@ -59,7 +69,9 @@ Une fonction est un object qui a une propriete "call".
 
 ```js
 typeof function() {} // "function"
+```
 
+```js
 function add(x, y) {
   return x + y;
 }
