@@ -118,7 +118,6 @@ function () {
 }
 
 two // undefined
-one = 'one' // ok
 
 {
   var three = 3;
@@ -130,12 +129,19 @@ three // 3
 `let` est scope au block
 ```js
 let one = 1;
-{
+
+function () {
   one // 1
   let two = 2;
 }
+
 two // undefined
-one = 'one' // ok
+
+{
+  let three = 3
+}
+
+three // undefined
 ```
 
 `const` est scope au block, la difference est qu'on ne peut pas rebind sa valeur
@@ -145,6 +151,7 @@ const one = 1;
   one // 1
   const two = 2;
 }
+
 two // undefined
 one = 'one' // TypeError assignment to constant variable
 ```
