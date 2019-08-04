@@ -120,12 +120,42 @@ true && (false || true) // true
 
 ## Prototypes
 
+```js
+const A = { foo() { return 'foo' }};
+const B = Object.create(A); // cree un objet dont le prototype sera l'objet A
+B.foo() // "foo" - foo n'existe pas sur B, on remonte la chaine prototypale et on trouve foo
+
+B.hasOwnProperty("foo") // false
+B.__proto__ // A
+```
+
+```js
+function Person(firstname, lastname) {
+  this.firstname = firstname;
+  this.lastname = lastname;
+};
+
+Person.prototype.fullname = function fullname() {
+  return this.firstname + " " + this.lastname;
+}
+
+const me = new Person("sun", "tzu"); // 
+
+me.fullname() // "sun tzu"
+```
+
 ## This
 
 `this` est la valeur du contexte. La valeur de `this` est dynamique.
 
-```
+```js
 this // Dans le browser renvoie l'objet Window
+```
+
+```
+'use strict';
+
+this // undefined - en strict mode le contexte par defaut est undefined
 ```
 
 ```js
@@ -154,6 +184,8 @@ me.fullname.apply({name: "tony", lastname: "soprano"}) // "tony soprano", apply 
 you.fullname = you.fullname.bind(me) // cree une fonction ou le this vaudra me
 you.fullname() // "sun tzu"
 ```
+
+Si il n'y a pas de point devant l'appel alors la fonction utilise le contexte global.
 
 ## Scopes
 
