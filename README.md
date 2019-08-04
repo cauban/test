@@ -72,6 +72,7 @@ Les valeurs suivantes sont falsy:
 + `0`
 + `NaN`
 + `false`
++ `""`
 
 ```js
 typeof true // "boolean"
