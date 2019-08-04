@@ -224,6 +224,17 @@ you.fullname() // "sun tzu"
 
 Si il n'y a pas de point devant l'appel alors la fonction utilise le contexte global.
 
+Rappel:
+```js
+function add(x, y) {
+  return x + y;
+}
+
+add.call(null, 2, 3) // 5
+add.apply(null, [2, 3]) // 5
+```
+Memotechnique, Apply commence par un A donc il prend un Array.
+
 ## Scopes
 
 `var` est scope globalement ou a la fonction.
@@ -345,6 +356,8 @@ logName(fruit) // apple bullshit - default case is logged because we forgot to b
 ```
 
 ### For loop
+
+Sur le for loop ils ont une question ou le code est incomprehensible. L'important est de retenir l'ordre d'execution pour pouvoir determiner l'ordre des logs.
 
 ```js
 for(i = 0; i < 5; i++) { // 0 1 2 3 4
