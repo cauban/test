@@ -133,7 +133,7 @@ one = 'one' // ok
 ```
 
 `const` est scope au block, la difference est qu'on ne peut pas rebind sa valeur
-```
+```js
 const one = 1;
 {
   one // 1
@@ -141,3 +141,4 @@ const one = 1;
 }
 two // undefined
 one = 'one' // TypeError assignment to constant variable
+```
