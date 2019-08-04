@@ -2,7 +2,7 @@
 
 ```js
 it('adds two numbers', () => {
-  expect(1 + 1).toBe(2);
+  expect(1 + 1).toBe(2); // pass
 })
 ```
 
@@ -11,7 +11,7 @@ it('adds two numbers', () => {
 ## Numbers 
 
 ```js
-typeof 1 // 'number'
+typeof 1 // "number"
 
 1 + 1 // 2
 
@@ -23,14 +23,16 @@ NaN !== NaN // true
 ## Strings
 
 ```js
-typeof 'hello' // string
+typeof 'hello' // "string"
 
-const name = 'jean';
-'hello' + name // 'hellojean' - concatenation
-`hello ${name}` // 'hello jean' - template string
+const name = "jean";
+"hello" + name // "hellojean" - concatenation
+`hello ${name}` // "hello jean" - template string
 ```
 
 ## Coercion
+
+"1" + 1 // "11"
 
 ## Objects
 
