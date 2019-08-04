@@ -19,6 +19,8 @@ typeof 1 // "number"
 
 const x = NaN;
 x !== x // true - NaN n'est jamais egal a lui meme
+
+~~3.14 // 3 - operateur binaire, bonus
 ```
 
 ## Strings
@@ -66,6 +68,11 @@ const add = (x, y) => x + y;
 ```
 
 ## Booleans
+
+```js
+typeof true // "boolean"
+```
+
 Les valeurs suivantes sont falsy:
 + `undefined`
 + `null`
@@ -75,8 +82,9 @@ Les valeurs suivantes sont falsy:
 + `""`
 
 ```js
-typeof true // "boolean"
-
+true && false // false
+true || false // true
+true && (false || true) // true
 ```
 
 ## Prototypes
