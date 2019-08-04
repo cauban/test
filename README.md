@@ -48,7 +48,7 @@ false + 1 // 1 - false coerced to zero
 ## Objects
 
 ```js
-typeof ({}) // "object"
+typeof {} // "object"
 ```
 
 ## Functions
@@ -66,6 +66,17 @@ const add = (x, y) => x + y;
 ```
 
 ## Booleans
+Les valeurs suivantes sont falsy:
++ `undefined`
++ `null`
++ `0`
++ `NaN`
++ `false`
+
+```js
+typeof true // "boolean"
+
+```
 
 ## Prototypes
 
