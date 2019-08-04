@@ -17,7 +17,8 @@ typeof 1 // "number"
 
 1 + 2 * 3 // 7 simple maths
 
-NaN !== NaN // true
+const x = NaN;
+x !== x // true - NaN n'est jamais egal a NaN
 ```
 
 ## Strings
