@@ -168,7 +168,7 @@ one // 1
 
 ### Hoisting
 
-Les declarations sont attachees au scope. On peut donc referencer une variable avant qu'elle ait une valeur assignee.
+Les declarations sont remontees en haut du scope. On peut donc referencer une variable avant qu'elle ait une valeur assignee.
 
 ```js
 var a; // declaration
