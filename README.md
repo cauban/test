@@ -1,8 +1,10 @@
 ## Tests
 
+```js
 it('adds two numbers', () => {
   expect(1 + 1).toBe(2);
 })
+```
 
 `typeof` retourne une string
 
