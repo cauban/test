@@ -4,6 +4,51 @@ Tests que j'ai eus (aleatoires): Nombres premiers, compter le nombre de mots dan
 
 Control flows, stack (un array en last in first out avec methodes push, pop), [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) le mec que j'ai eu vient de Java il va te dire que tu ne peux pas mettre des trucs dynamiquement sur un objet et que tu dois utiliser une map avec get, set..
 
+## Nombres premiers:
+
+Un nombre est premier s'il est divisible seulement par 1 et par lui meme.
+
+```js
+function isEven(x) {
+  return x % 2 === 0;
+}
+
+function listPrimes(x) {
+  let primes = [];
+
+  // 1 n'est pas premier car 1 n'est pas distinct de lui meme
+  for (let i = 2; i <= x; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+
+  return primes;
+}
+
+function isPrime(x) {
+  // 2 est premier car divisible seulement par 1 et 2
+  if (x === 2) return true;
+
+  // les nombres pairs sont divisibles par 2 donc forcement non premiers
+  if (isEven(x)) {
+    return false;
+  }
+
+  // jusqu'a x non inclus, si x est divisible par un nombre quelqu'il soit
+  // alors il n'est pas premier
+  for (let i = 3; i < x; i++) {
+    if (x % i === 0) {
+      return false;
+    }
+  }
+
+  // sinon il est premier
+  return true;
+}
+```
+
+
 # Test React
 
 Todolist avec une api
