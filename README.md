@@ -31,12 +31,14 @@ function isPrime(x) {
   if (x === 2) return true;
 
   // les nombres pairs sont divisibles par 2 donc forcement non premiers
+  // on pourrait egalement filtrer ceux qui sont divisibles par trois
   if (isEven(x)) {
     return false;
   }
 
   // jusqu'a x non inclus, si x est divisible par un nombre quelqu'il soit
   // alors il n'est pas premier
+  // on peut aussi n'incrementer que si i au carre est inferieur a x mais je laisse la version naive
   for (let i = 3; i < x; i++) {
     if (x % i === 0) {
       return false;
