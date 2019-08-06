@@ -37,7 +37,6 @@ function isPrime(x) {
 
   // jusqu'a x non inclus, si x est divisible par un nombre quelqu'il soit
   // alors il n'est pas premier
-  // on peut opti en allant seulement jusqu'a la racine carree de x mais je laisse la version naive
   for (let i = 3; i < x; i++) {
     if (x % i === 0) {
       return false;
